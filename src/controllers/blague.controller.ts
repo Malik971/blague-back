@@ -1,6 +1,8 @@
 import { Request, Response } from 'express';
 import Blague from '../models/blague.model';
 
+// Le cerveau (logique des actions)
+
 export const getAllBlagues = async (req: Request, res: Response) => {
   try {
     // const count = await Blague.count();

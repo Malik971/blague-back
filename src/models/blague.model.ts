@@ -1,6 +1,8 @@
 import { Model, DataTypes, Optional } from 'sequelize';
 import sequelize from '../config/database';
 
+// Le plan de construction d'une blague
+
 // 1. Définition du type des attributs
 interface BlagueAttributes {
   id: number;

@@ -2,6 +2,8 @@ import express from 'express';
 import sequelize from './config/database';
 import blagueRoutes from './routes/blague.routes';
 
+// Construction de la maison (connexion des pièces)
+
 const app = express();
 
 app.use(express.json());
