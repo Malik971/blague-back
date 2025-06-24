@@ -1,11 +1,14 @@
-import { Request, Response } from 'express';
-import Blague from '../models/blague.model';
+import { Request, Response } from "express";
+import Blague from "../models/blague.model";
+
 
 export const createBlague = async (req: Request, res: Response) => {
   const { question, reponse } = req.body;
 
   if (!question || !reponse) {
-    return res.status(400).json({ error: "Champs requis : question et reponse" });
+    return res
+      .status(400)
+      .json({ error: "Champs requis : question et reponse" });
   }
 
   try {

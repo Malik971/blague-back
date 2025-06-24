@@ -14,6 +14,8 @@ interface BlagueAttributes {
 interface BlagueCreationAttributes extends Optional<BlagueAttributes, 'id'> {}
 
 // 3. Classe Blague qui hérite du modèle Sequelize
+// peux avoir des millier de données
+/// plus simple
 class Blague extends Model<BlagueAttributes, BlagueCreationAttributes>
   implements BlagueAttributes {
   public id!: number;
