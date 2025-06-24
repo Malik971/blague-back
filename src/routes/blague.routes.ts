@@ -4,6 +4,7 @@ import { getBlagueById } from "../controllers/blagueid.controller";
 import { createBlague } from "../controllers/blaguepost.controller";
 import { updateBlague } from "../controllers/blagueput.controller";
 import { deleteBlague } from "../controllers/blaguedelete.controller";
+import { getRandomBlague } from "../controllers/blaguerandom.controller";
 
 // Les portes d’entrée (URL)
 // Le cerveau (logique des actions)
@@ -21,6 +22,18 @@ const router = express.Router();
  *         description: Liste de blagues
  */
 router.get("/", getAllBlagues as RequestHandler); // ← Il passe toutes les commandes au contrôleur (le chef)
+
+/**
+ * @swagger
+ * /random:
+ *   get:
+ *     summary: Récupère une blague aléatoire
+ *     tags: [Blagues]
+ *     responses:
+ *       200:
+ *         description: Une blague aléatoire
+ */
+router.get("/random", getRandomBlague as RequestHandler);
 
 /**
  * @swagger
