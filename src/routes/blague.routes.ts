@@ -64,8 +64,8 @@ import { createBlague } from "../controllers/blaguepost.controller";
 const router = express.Router();
 
 // Route : /api/v1/blagues/random
-router.get("/", getAllBlagues as RequestHandler);
-router.get("/:id", getBlagueById as RequestHandler);
-router.post("/", createBlague as RequestHandler);
+router.get("/", getAllBlagues as RequestHandler); // ← Il passe toutes les commandes au contrôleur (le chef)
+router.get("/:id", getBlagueById as RequestHandler); // ← Il passe une commande au contrôleur (le chef)
+router.post("/", createBlague as RequestHandler); // ← Il passe une demande de création commande au contrôleur (le chef)
 
 export default router;
