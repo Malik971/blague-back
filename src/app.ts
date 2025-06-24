@@ -4,6 +4,7 @@ import blagueRoutes from "./routes/blague.routes";
 import swaggerUi from "swagger-ui-express";
 import { swaggerSpec } from "./docs/swagger";
 import cors from "cors";
+import dotenv from "dotenv";
 
 // Construction de la maison (connexion des pièces)
 
@@ -12,6 +13,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/api/v1/blagues", blagueRoutes);
+dotenv.config();
 
 // Connexion BDD
 sequelize
