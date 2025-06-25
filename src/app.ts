@@ -5,6 +5,7 @@ import swaggerUi from "swagger-ui-express";
 import { swaggerSpec } from "./docs/swagger";
 import cors from "cors";
 import dotenv from "dotenv";
+import './models/user.model';
 
 // Construction de la maison (connexion des pièces)
 
